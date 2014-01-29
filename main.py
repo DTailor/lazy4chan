@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
         old = 0
         new = 0
-        for span in soup.find_all('span',{'class':'fileText'}):
+        for span in soup.find_all('div',{'class':'fileText'}):
 	    imgLink = re.sub('//','http://',span.find('a')['href'])
 	    name = urlparse(imgLink).path.split('/')[-1]
 
